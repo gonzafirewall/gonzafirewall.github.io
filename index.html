@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>gonzalomartinez.dev</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+        }
+        
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        /* use viewport-relative units to cover page fully */
+        
+        body,
+        html {
+            height: 100%;
+            width: 100%;
+        }
+        /* include border and padding in element width and height */
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Fira Code', monospace;
+            color: white;
+        }
+        
+        .main {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            background-color: #004789;
+            background-image: linear-gradient(0deg, #004789 0%, #454142 100%);
+        }
+        
+        .main h1 {
+            padding-top: 40px;
+            width: 100%;
+            text-align: center;
+            font-size: 50px;
+        }
+        
+        .main>.centered {
+            width: 50vw;
+            text-align: center;
+            margin: 0 auto;
+        }
+        
+        @media (max-width: 600px) {
+            .main>.centered {
+                width: 100vw;
+            }
+            .main h1 {
+                font-size: 30px
+            }
+            body {
+                font-size: 0.9rem;
+            }
+        }
+        
+        a {
+            color: gray;
+        }
+        
+        ul {
+            padding: 0;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        .padding {
+            padding: 20px 0;
+        }
+        
+        hr {
+            border-top: 1px solid black;
+            border-bottom: unset;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h1>GonzaloMartinez.dev</h1>
+        <div class="centered padding">
+            Soy Gonzalo Martinez, programador, sysadmin, y sobre todo un curioso por las nuevas técnologias. Vivo en San Luis mi lugar por elección.
+        </div>
+
+        <hr class="centered">
+
+        <div class="centered padding">
+            Formas de contactarme.
+            <ul>
+                <li>twitter: <a href="https://twitter.com/gonzamartinez" target="_blank" rel="noopener noreferrer">https://twitter.com/gonzamartinez</a></li>
+                <li>facebook: <a href="https://www.facebook.com/gonzafirewall" target="_blank" rel="noopener noreferrer">https://www.facebook.com/gonzafirewall</a></li>
+                <li>linkedin: <a href="https://www.linkedin.com/in/gonzamartinez/" target="_blank" rel="noopener noreferrer">https://www.linkedin.com/in/gonzamartinez/</a></li>
+                <li>mail: <a href="mailto:gonzalo@deploshark.com">gonzalo@deploshark.com</a></li>
+            </ul>
+        </div>
+        <div class="centered padding">
+            <code>
+                 > print("Hola a todos")
+             </code>
+        </div>
+    </div>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <script src="" async defer></script>
+</body>
+
+</html>
