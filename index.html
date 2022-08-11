@@ -45,11 +45,19 @@
         }
         
         .main {
+            padding-top: 100px;
             height: 100%;
             width: 100%;
             overflow: hidden;
             background-color: #004789;
             background-image: linear-gradient(0deg, #004789 0%, #454142 100%);
+        }
+        
+        .hero-container {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-around;
+            align-items: center;
         }
         
         .main h1 {
@@ -97,20 +105,39 @@
             border-top: 1px solid black;
             border-bottom: unset;
         }
+        
+        header {
+            display: none;
+            height: 50px;
+        }
+        
+        header ul li {
+            color: red;
+        }
     </style>
 </head>
 
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="https://blog.deploshark.com">Blog</a></li>
+                <li><a href="#contacto">Contactame</a></li>
+            </ul>
+        </nav>
+    </header>
     <div class="main">
-        <h1>GonzaloMartinez.dev</h1>
-        <div class="centered padding">
-            Soy Gonzalo Martinez, programador, sysadmin, y sobre todo un curioso por las nuevas técnologias. Vivo en San Luis mi lugar por elección.
+        <div class="hero-container">
+            <div class="centered">
+
+                <img style="clip-path: url(#blob);" width="300px" src="yo.jpg" alt="Foto de frente de Gonzalo Martinez">
+            </div>
+            <div class="centered padding" style="font-size: 35px; width: 30vw;">
+                <h1>Soy Gonza 🤓​</h1>
+                Soy programador, sysadmin, y sobre todo un curioso por las nuevas técnologias. Vivo en San Luis mi lugar por elección.
+            </div>
         </div>
-
-        <hr class="centered">
-
-        <div class="centered padding">
-            Formas de contactarme.
+        <div class="centered">
             <ul>
                 <li>twitter: <a href="https://twitter.com/gonzamartinez" target="_blank" rel="noopener noreferrer">https://twitter.com/gonzamartinez</a></li>
                 <li>facebook: <a href="https://www.facebook.com/gonzafirewall" target="_blank" rel="noopener noreferrer">https://www.facebook.com/gonzafirewall</a></li>
@@ -118,6 +145,8 @@
                 <li>mail: <a href="mailto:gonzalo@deploshark.com">gonzalo@deploshark.com</a></li>
             </ul>
         </div>
+
+        <svg height="0" width="0"><defs><clipPath id="blob" clipPathUnits="objectBoundingBox"><path d="M0.75815095,0.0579477769 C0.879893708,0.187288937 0.902165272,0.677587654 0.799370955,0.785996249 C0.627963035,0.966765889 0.26163708,0.91434951 0.111342491,0.755791573 C-0.0332137967,0.603287436 -0.035795248,0.382887577 0.0965066612,0.173955315 C0.200239457,0.0101396315 0.648923894,-0.0580965318 0.75815095,0.0579477769 Z"></path></clipPath></defs></svg>
         <div class="centered padding">
             <code>
                  > print("Hola a todos")
