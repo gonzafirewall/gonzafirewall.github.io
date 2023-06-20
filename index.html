@@ -3,7 +3,7 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
+<html data-theme="dark">
 
 <head>
     <meta charset="utf-8">
@@ -15,6 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
 
     <style>
         * {
@@ -28,7 +29,6 @@
         }
         /* use viewport-relative units to cover page fully */
         
-        body,
         html {
             height: 100%;
             width: 100%;
@@ -41,16 +41,15 @@
         
         body {
             font-family: 'Fira Code', monospace;
-            color: white;
         }
         
-        .main {
+        .main {       
+            min-height: 100%;     
             padding-top: 100px;
-            height: 100%;
-            width: 100%;
-            overflow: hidden;
             background-color: #004789;
             background-image: linear-gradient(0deg, #004789 0%, #454142 100%);
+            background-repeat: no-repeat;
+            background-size: cover;
         }
         
         .hero-container {
@@ -67,12 +66,26 @@
             font-size: 50px;
         }
         
-        .main>.centered {
-            width: 50vw;
+        .centered {
             text-align: center;
             margin: 0 auto;
         }
-        
+        .social {
+            background-color: rgba(0,0,0, 0.4);
+            border-radius: 10px;
+            padding: 10px;
+        }
+        .social ul {
+            margin-bottom: 0px;
+        }
+        .mt-30 {
+            margin-top: 30px;
+        }
+        @media (max-width: 1000px) {
+            .main {
+                padding-top: unset;
+            }
+        }
         @media (max-width: 600px) {
             .main>.centered {
                 width: 100vw;
@@ -93,7 +106,7 @@
             padding: 0;
         }
         
-        li {
+        ul li {
             list-style: none;
         }
         
@@ -117,7 +130,7 @@
     </style>
 </head>
 
-<body>
+<body class="main">
     <header>
         <nav>
             <ul>
@@ -126,26 +139,27 @@
             </ul>
         </nav>
     </header>
-    <div class="main">
-        <div class="hero-container">
-            <div class="centered">
-
-                <img style="clip-path: url(#blob);" width="300px" src="yo.jpg" alt="Foto de frente de Gonzalo Martinez">
-            </div>
-            <div class="centered padding" style="font-size: 35px; width: 30vw;">
+    <div class="container">
+        <div class="grid">
+            <div class="centered padding" style="font-size: 35px">
                 <h1>Soy Gonza 🤓​</h1>
                 Soy programador, sysadmin, y sobre todo un curioso por las nuevas técnologias. Vivo en San Luis mi lugar por elección.
             </div>
+            <div class="centered">
+                <img style="clip-path: url(#blob);" width="300px" src="yo.jpg" alt="Foto de frente de Gonzalo Martinez">
+            </div>
         </div>
-        <div class="centered">
-            <ul>
-                <li>twitter: <a href="https://twitter.com/gonzamartinez" target="_blank" rel="noopener noreferrer">https://twitter.com/gonzamartinez</a></li>
-                <li>facebook: <a href="https://www.facebook.com/gonzafirewall" target="_blank" rel="noopener noreferrer">https://www.facebook.com/gonzafirewall</a></li>
-                <li>linkedin: <a href="https://www.linkedin.com/in/gonzamartinez/" target="_blank" rel="noopener noreferrer">https://www.linkedin.com/in/gonzamartinez/</a></li>
-                <li>mail: <a href="mailto:gonzalo@deploshark.com">gonzalo@deploshark.com</a></li>
-            </ul>
+        <div class="grid mt-30">   
+            <div class="centered social">
+                <ul>
+                    <li>twitter: <a href="https://twitter.com/gonzamartinez" target="_blank" rel="noopener noreferrer">https://twitter.com/gonzamartinez</a></li>
+                    <li>facebook: <a href="https://www.facebook.com/gonzafirewall" target="_blank" rel="noopener noreferrer">https://www.facebook.com/gonzafirewall</a></li>
+                    <li>linkedin: <a href="https://www.linkedin.com/in/gonzamartinez/" target="_blank" rel="noopener noreferrer">https://www.linkedin.com/in/gonzamartinez/</a></li>
+                    <li>mail: <a href="mailto:gonzalo@deploshark.com">gonzalo@deploshark.com</a></li>
+                </ul>
+            </div>
         </div>
-
+    
         <svg height="0" width="0"><defs><clipPath id="blob" clipPathUnits="objectBoundingBox"><path d="M0.75815095,0.0579477769 C0.879893708,0.187288937 0.902165272,0.677587654 0.799370955,0.785996249 C0.627963035,0.966765889 0.26163708,0.91434951 0.111342491,0.755791573 C-0.0332137967,0.603287436 -0.035795248,0.382887577 0.0965066612,0.173955315 C0.200239457,0.0101396315 0.648923894,-0.0580965318 0.75815095,0.0579477769 Z"></path></clipPath></defs></svg>
         <div class="centered padding">
             <code>
@@ -153,6 +167,7 @@
              </code>
         </div>
     </div>
+
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
